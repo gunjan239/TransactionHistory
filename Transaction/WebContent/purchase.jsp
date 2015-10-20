@@ -36,46 +36,47 @@
 	});
 </script>
 <style type="text/css">
+#catalog {
+	padding: 0;
+	list-style: none;
+	/* background: #f2f2f2;
+ */}
 
+#catalog li {
+	display: inline-block;
+	position: relative;
+	line-height: 21px;
+	text-align: left;
+}
 
+#catalog li a {
+	display: block;
+	padding: 8px 25px;
+	color: #333;
+	text-decoration: none;
+}
 
- #catalog{
-        padding: 0;
-        list-style: none;
-        background: #f2f2f2;
-    }
-    #catalog li{
-        display: inline-block;
-        position: relative;
-        line-height: 21px;
-        text-align: left;
-    }
-    #catalog li a{
-        display: block;
-        padding: 8px 25px;
-        color: #333;
-        text-decoration: none;
-    }
-    #catalog li a:hover{
-        color: #fff;
-        background: #939393;
-    }
-    #catalog li ul.dropdown{
-        min-width: 125px; /* Set width of the dropdown */
-        background: #f2f2f2;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-    }
-    #catalog li:hover ul.dropdown{
-        display: block;	/* Display the dropdown */
-    }
-    #catalog li ul.dropdown li{
-        display: block;
-    }
+#catalog li a:hover {
+	color: #fff;
+	background: #939393;
+}
 
+#catalog li ul.dropdown {
+	min-width: 125px; /* Set width of the dropdown */
+	background: #f2f2f2;
+	display: none;
+	position: absolute;
+	z-index: 999;
+	left: 0;
+}
 
+#catalog li:hover ul.dropdown {
+	display: block; /* Display the dropdown */
+}
+
+#catalog li ul.dropdown li {
+	display: block;
+}
 </style>
 </head>
 <body>
@@ -120,52 +121,38 @@
 			</div>
 		</header>
 		<!-- header ends -->
-		
+
 		HI Dhakkans
-		
-		
+
+
 		<div class="leftCol">
 			<h2>Account</h2>
 			<nav>
 				<!-- left navigation -->
-				
-				
+
+
 				<ul id="catalog">
-        <li><a href="#">Edit Profile</a></li>
-        <li>
-            <a href="#">Transaction History &#9662;</a>
-            <ul class="dropdown">
-                <li><a href="#">Books Purchased</a></li>
-                <li><a href="#">Books Rented</a></li>
-            </ul>
-        </li>
-    </ul>
-				
-				
-				
+					<li><a href="#">Edit Profile</a></li>
+					<li><a href="#">Transaction History &#9662;</a>
+						<ul class="dropdown">
+							<li><a href="#">Books Purchased</a></li>
+							<li><a href="#">Books Rented</a></li>
+						</ul></li>
+				</ul>
+
+
+
 			</nav>
-			
-			
-		
-			
+
+
+
+
 
 		</div>
-		
-		
-		<section style="height: 650px; margin-bottom: 20px;"></section>
-		
-		<ul>
-        <li><a href="#">Edit Profile</a></li>
-        <li>
-            <a href="#">Transaction History &#9662;</a>
-            <ul class="dropdown">
-                <li><a href="#">Books Purchased</a></li>
-                <li><a href="#">Books Rented</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    
+
+
+		<section style="height: 650px; margin-bottom: 20px;">
+		</section>
 		<footer>
 			<div id="footer">
 				<div style="float: left; margin-left: 386px;">
