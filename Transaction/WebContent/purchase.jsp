@@ -40,7 +40,8 @@
 	padding: 0;
 	list-style: none;
 	/* background: #f2f2f2;
- */}
+ */
+}
 
 #catalog li {
 	display: inline-block;
@@ -76,6 +77,10 @@
 
 #catalog li ul.dropdown li {
 	display: block;
+}
+
+#test{
+	float: left;
 }
 </style>
 </head>
@@ -122,37 +127,71 @@
 		</header>
 		<!-- header ends -->
 
-		HI Dhakkans
+		<div class="leftCol" id="test">
+			<section style="margin-top: 0%; position: left;">
+
+				<h2>Account</h2>
+				<nav>
+					<!-- left navigation -->
 
 
-		<div class="leftCol">
-			<h2>Account</h2>
-			<nav>
-				<!-- left navigation -->
+					<ul id="catalog">
+						<li><a href="#">Edit Profile</a></li>
+						<li><a href="#">Transaction History &#9662;</a>
+							<ul class="dropdown">
+								<li><a href="#">Books Purchased</a></li>
+								<li><a href="#">Books Rented</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+		<div id="test" style="background-color:white;">
+			<section>
+				<h1>Books Purchased</h1>
+				<hr style="color: red"/>
+				<table id="tablepaging" class="yui"
+					style="width: 750px; height: 91px; border-bottom-width: 0px">
+					<thead>
+						<tr>
+							<th style="width:500px">Name & Author</th>
+							<th style="width:400px">ISBN Number</th>
+							<th style="width:300px">Purchase Date</th>
+							<th style="width:200px">Price</th>
+							<th style="width:300px">Current Status </th>
+												</tr>
+					</thead>
 
+					<c:forEach items="${adminReportsList}" var="current">
+						<tbody>
+							<tr id="${current.categoryName}">
+								<td>${current.categoryName}</td>
+								<td class="bookTitle_td">${current.bookTitle}</td>
+								<td class="bookAuthor_td">${current.bookAuthor}</td>
+								<td class="publisherName_td">${current.publisherName}</td>
+								<td>${current.orderType}</td>
+								<td class="quantity_td" style="text-align: center">${current.quantity}
+								</td>
 
-				<ul id="catalog">
-					<li><a href="#">Edit Profile</a></li>
-					<li><a href="#">Transaction History &#9662;</a>
-						<ul class="dropdown">
-							<li><a href="#">Books Purchased</a></li>
-							<li><a href="#">Books Rented</a></li>
-						</ul></li>
-				</ul>
-
-
-
-			</nav>
-
-
-
-
-
+							</tr>
+						</tbody>
+					</c:forEach>
+				</table>
+				
+				
+				<div id="pageNavPosition" align="center"></div>
+				<script type="text/javascript">
+					var pager = new Pager('tablepaging', 10);
+					pager.init();
+					pager.showPageNav('pager', 'pageNavPosition');
+					pager.showPage(1);
+				</script>
+			</section>
+		</div>
 		</div>
 
 
-		<section style="height: 650px; margin-bottom: 20px;">
-		</section>
+		<section style="height: 650px; margin-bottom: 20px;"></section>
 		<footer>
 			<div id="footer">
 				<div style="float: left; margin-left: 386px;">

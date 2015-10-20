@@ -39,7 +39,8 @@
 #catalog {
 	padding: 0;
 	list-style: none;
-	/*background: #f2f2f2;*/
+	/* background: #f2f2f2;
+ */
 }
 
 #catalog li {
@@ -77,6 +78,11 @@
 #catalog li ul.dropdown li {
 	display: block;
 }
+
+#test{
+	float: left;
+	
+}
 </style>
 </head>
 <body>
@@ -85,9 +91,9 @@
         <![endif]-->
 
 	<!-- Add your site or application content here -->
-	<div id="wrapper" class="homeAdmin">
+	
 		<!-- header starts-->
-		<header>
+		<header style="height:5%;position: relative;">
 			<div id="header">
 				<a href="/SapeStore/manageInventory" title="SapeStore" class="logo"><img
 					src="img/logo.jpg" width="231" height="109" alt="SapeStore"></a>
@@ -122,8 +128,9 @@
 		</header>
 		<!-- header ends -->
 
-		<section>
-			<div class="leftCol">
+		<div class="leftCol" id="test" style="height:60%;position: relative;">
+			
+
 				<h2>Account</h2>
 				<nav>
 					<!-- left navigation -->
@@ -133,17 +140,62 @@
 						<li><a href="#">Edit Profile</a></li>
 						<li><a href="#">Transaction History &#9662;</a>
 							<ul class="dropdown">
-								<li><a href="purchase.jsp">Books Purchased</a></li>
+								<li><a href="#">Books Purchased</a></li>
 								<li><a href="#">Books Rented</a></li>
 							</ul></li>
 					</ul>
 				</nav>
-			</div>
-		</section>
+			
+		</div>
+		<%-- <div id="test">
+			<section>
+				<h1>Books Purchased</h1>
+				<p>------------------------------------------------------------------------------------------------------------</p>
+				<table id="tablepaging" class="yui"
+					style="width: 700px; height: 91px; border-bottom-width: 0px">
+					<thead>
+						<tr>
+							<th style="width:500px;">Name & Author</th>
+							<th style="width:400px;">ISBN Number</th>
+							<th style="width:300px;">Purchase Date</th>
+							<th style="width:200px;">Price</th>
+							<th  style="width:300px;">Current Status </th>
+						</tr>
+					</thead>
 
-		<section style="height: 650px; margin-bottom: 20px;"></section>
+					<c:forEach items="${adminReportsList}" var="current">
+						<tbody>
+							<tr id="${current.categoryName}">
+								<td>${current.categoryName}</td>
+								<td class="bookTitle_td">${current.bookTitle}</td>
+								<td class="bookAuthor_td">${current.bookAuthor}</td>
+								<td class="publisherName_td">${current.publisherName}</td>
+								<td>${current.orderType}</td>
+								<td class="quantity_td" style="text-align: center">${current.quantity}
+								</td>
 
-		<footer>
+							</tr>
+						</tbody>
+					</c:forEach>
+				</table>
+				
+				<p>------------------------------------------------------------------------------------------------------------</p>
+				<div id="pageNavPosition" align="center"></div>
+				<script type="text/javascript">
+					var pager = new Pager('tablepaging', 10);
+					pager.init();
+					pager.showPageNav('pager', 'pageNavPosition');
+					pager.showPage(1);
+				</script>
+			</section>
+		</div>
+		</div> --%>
+
+    <div style="line-height: 3350%;">
+    
+   .</div>
+		
+		<footer  >
 			<div id="footer">
 				<div style="float: left; margin-left: 386px;">
 					<a href="/SapeStore/contactUsCustomer" style="color: #21addd;">Contact
@@ -161,7 +213,7 @@
 				</div>
 			</div>
 		</footer>
-	</div>
+	
 
 
 </body>
