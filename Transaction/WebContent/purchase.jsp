@@ -90,45 +90,11 @@
         <![endif]-->
 
 	<!-- Add your site or application content here -->
-	<div id="wrapper" class="homeAdmin">
-		<!-- header starts-->
-		<header>
-			<div id="header">
-				<a href="/SapeStore/manageInventory" title="SapeStore" class="logo"><img
-					src="img/logo.jpg" width="231" height="109" alt="SapeStore"></a>
-				<ul class="topLinks hide">
-					<li><input name="include_books" type="checkbox"
-						value="include_books"> <a
-						title="Add books from Partner Store" href="javacript:void(0)">Include
-							books from Partner Store</a></li>
-					<li><a class='inline' href="#shoppingCart"><img
-							src="img/icon_cart.jpg" width="15" height="12" alt="cart"></a></li>
-					<li class="cartNum">0</li>
-				</ul>
-				<!-- in case of admin hide this and display another one -->
-				<ul class="topLinks">
-					<li><c:choose>
-							<c:when test="${not empty userId}">
-						Welcome ${username}
-					</c:when>
-						</c:choose></li>
-				</ul>
-				<nav>
-					<ul class="nav">
-
-						<li><a href="">Home</a></li>
-
-						<li><a href="">Account</a></li>
-
-						<li><a href="">Logout</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<!-- header ends -->
-
-		<div class="leftCol" id="test">
-			<section style="margin-top: 0%; position: left;">
+	
+		<jsp:include page="header.jsp" />
+<section>
+		<div class="leftCol" id="test" style="height:100vh">
+			
 
 				<h2>Account</h2>
 				<nav>
@@ -144,8 +110,9 @@
 							</ul></li>
 					</ul>
 				</nav>
-			</section>
+			
 		</div>
+		</section>
 		<div id="test" style="background-color:white;">
 			<section>
 				<h1>Books Purchased</h1>
@@ -191,27 +158,9 @@
 		</div>
 
 
-		<section style="height: 650px; margin-bottom: 20px;"></section>
-		<footer>
-			<div id="footer">
-				<div style="float: left; margin-left: 386px;">
-					<a href="/SapeStore/contactUsCustomer" style="color: #21addd;">Contact
-						Us</a>
-				</div>
-				<div style="float: left; margin-left: 6px; color: #21addd">|</div>
-
-				<div style="float: left; margin-left: 7px;">
-					<a href="/SapeStore//policyCustomer" style="color: #21addd;">Privacy
-						Policy</a>
-				</div>
-				<div>
-					Powered by <img src="img/sapient_nitro.jpg" width="78" height="14"
-						alt="sapient nitro">
-				</div>
-			</div>
-		</footer>
+		
 	</div>
 
-
+<jsp:include page="footer.jsp" />
 </body>
 </html>
