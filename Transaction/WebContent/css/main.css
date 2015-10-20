@@ -117,7 +117,7 @@ ul li{list-style:none;}
 #header nav li{    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; font-size: 14px;line-height: 29px; margin-top: -12px;padding-bottom: 29px;text-transform: uppercase;}
 #header nav li a{color:#21addd;}
 #header nav li:hover, #header nav li:focus, .active{background: url("../img/arrow_highlight.jpg") no-repeat scroll center 47px transparent;line-height: 29px;overflow: hidden;}
-.leftCol{width:208px; background:#fff;float:left;border-left:solid 1px #b1b5b6; border-right:solid 1px #b1b5b6; padding:38px 0 0 20px; min-height:500px;}
+.leftCol{width:208px; background:#fff;float:left;border-left:solid 1px #b1b5b6; border-right:solid 1px #b1b5b6; padding:38px 0 0 20px; min-height:500px;height: 100%;}
 #mainContent{background:#dfe5e6;width:751px; float:right; border-right:solid 1px #b1b5b6; padding:38px 0 0 20px; min-height:500px;}
 .leftCol nav ul {margin:0 ; padding:8px 0 38px;}
 .leftCol nav ul li a, #mainContent ul li a{color:#1d1d1d; font-size:13px;}

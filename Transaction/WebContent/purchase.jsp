@@ -121,7 +121,7 @@
 		</header>
 		<!-- header ends -->
 		
-		
+		HI Dhakkans
 		
 		
 		<div class="leftCol">
@@ -135,7 +135,7 @@
         <li>
             <a href="#">Transaction History &#9662;</a>
             <ul class="dropdown">
-                <li><a href="purchase.jsp">Books Purchased</a></li>
+                <li><a href="#">Books Purchased</a></li>
                 <li><a href="#">Books Rented</a></li>
             </ul>
         </li>
@@ -165,6 +165,7 @@
         </li>
         <li><a href="#">Contact</a></li>
     </ul>
+    
 		<footer>
 			<div id="footer">
 				<div style="float: left; margin-left: 386px;">
