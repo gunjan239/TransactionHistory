@@ -85,13 +85,13 @@
         <![endif]-->
 
 	<!-- Add your site or application content here -->
-
+	<div id="wrapper" style="height: 100%; width: 100%">
 		<jsp:include page="header.jsp" />
-		<section>
-			<div class="leftCol" style="height:100vh">
+		<div style="height: 90%">
+			<div class="leftCol" style="height:90vh">
 				<h2>Account</h2>
-				
-                  <nav>
+
+				<nav>
 					<ul id="catalog">
 						<li><a href="#">Edit Profile</a></li>
 						<li><a href="#">Transaction History &#9662;</a>
@@ -100,15 +100,18 @@
 								<li><a href="#">Books Rented</a></li>
 							</ul></li>
 					</ul>
-					</nav>
+				</nav>
 			</div>
-		</section>
+		</div>
 
-		
 
-		
-	
+		<jsp:include page="footer.jsp" />
+	</div>
 
-	<jsp:include page="footer.jsp" />
+
+
+
+
+
 </body>
 </html>
