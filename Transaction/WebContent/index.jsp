@@ -46,28 +46,31 @@
 	display: inline-block;
 	position: relative;
 	line-height: 21px;
-	text-align: left;
+	text-align:  left;
+	width=100%;
 }
 
 #catalog li a {
 	display: block;
-	padding: 8px 25px;
-	color: #333;
+	padding: 8px 8px;
+/*clor: #333;*/
 	text-decoration: none;
+	text-align:left;
 }
 
 #catalog li a:hover {
-	color: #fff;
-	background: #939393;
+	/*color: #fff;*/
+/*ackground: #939393;*/
+    
 }
 
 #catalog li ul.dropdown {
 	min-width: 125px; /* Set width of the dropdown */
-	background: #f2f2f2;
+/*ackground: #f2f2f2;*/
 	display: none;
 	position: absolute;
 	z-index: 999;
-	left: 0;
+	left: 0px;
 }
 
 #catalog li:hover ul.dropdown {
@@ -88,12 +91,12 @@
 	<div id="wrapper" style="height: 100%; width: 100%">
 		<jsp:include page="header.jsp" />
 		<div style="height: 90%">
-			<div class="leftCol" style="height:90vh">
+			<div class="leftCol" style="height:100%;overflow:100%;">
 				<h2>Account</h2>
 
 				<nav>
 					<ul id="catalog">
-						<li><a href="#">Edit Profile</a></li>
+						<li><a href="#">Edit Profile &#9662;    </a></li>
 						<li><a href="#">Transaction History &#9662;</a>
 							<ul class="dropdown">
 								<li><a href="purchase.jsp">Books Purchased</a></li>

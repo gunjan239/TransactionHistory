@@ -91,9 +91,10 @@
 
 	<!-- Add your site or application content here -->
 	
+	<div id="wrapper" style="height: 100%; width: 100%">
 		<jsp:include page="header.jsp" />
-<section>
-		<div class="leftCol" id="test" style="height:100vh">
+	
+		<div class="leftCol" id="test" style="height:100%;">
 			
 
 				<h2>Account</h2>
@@ -112,37 +113,41 @@
 				</nav>
 			
 		</div>
-		</section>
+	
 		<div id="test" style="background-color:white;">
 			<section>
 				<h1>Books Purchased</h1>
-				<hr style="color: red"/>
+			    	<p>-----------------------------------------------------------------------------------</p>
 				<table id="tablepaging" class="yui"
-					style="width: 750px; height: 91px; border-bottom-width: 0px">
-					<thead>
+					style="width:1200px; height: 91px; border-bottom-width: 0px">
+					<thead style="text-align:left;font-size:14px;font-family:SapientSansMedium;font-weight:regular;color:#000000">
 						<tr>
-							<th style="width:500px">Name & Author</th>
+							<th style="width:500px;padding-right:50px;padding-left:50px;">Name & Author</th>
 							<th style="width:400px">ISBN Number</th>
 							<th style="width:300px">Purchase Date</th>
 							<th style="width:200px">Price</th>
 							<th style="width:300px">Current Status </th>
 												</tr>
+						
 					</thead>
+					
+						<p>-----------------------------------------------------------------------------------</p>
 
-					<c:forEach items="${adminReportsList}" var="current">
-						<tbody>
+					<%-- <c:forEach items="${adminReportsList}" var="current"> --%>
+						<tbody style="font-size:12px;font-family:SapientSansRegular;font-weight:regular;color:#1d1d1d">
+						
 							<tr id="${current.categoryName}">
-								<td>${current.categoryName}</td>
-								<td class="bookTitle_td">${current.bookTitle}</td>
-								<td class="bookAuthor_td">${current.bookAuthor}</td>
-								<td class="publisherName_td">${current.publisherName}</td>
-								<td>${current.orderType}</td>
-								<td class="quantity_td" style="text-align: center">${current.quantity}
+								<td style="width:500px;padding-right:50px;padding-left:50px;"><img src="img/icon_cart.jpg" width="56" height="78"/>{current.categoryName}</td>
+								<td class="bookTitle_td"style="width:400px">{current.bookTitle}</td>
+								<td class="bookAuthor_td" style="width:300px">{current.bookAuthor}</td>
+								<td class="publisherName_td" style="width:200px">{current.publisherName}</td>
+								<td class="quantity_td" style="text-align: center;width:300px"><a href="#">Status</a>
 								</td>
 
 							</tr>
 						</tbody>
-					</c:forEach>
+					
+				<%-- 	</c:forEach> --%>
 				</table>
 				
 				
@@ -159,8 +164,7 @@
 
 
 		
-	</div>
-
+	
 <jsp:include page="footer.jsp" />
 </body>
 </html>
