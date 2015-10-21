@@ -94,7 +94,7 @@
 	<div id="wrapper" style="height: 100%; width: 100%">
 		<jsp:include page="header.jsp" />
 	
-		<div class="leftCol" id="test" style="height:100%;">
+		<div class="leftCol" id="sidebar" style="height:100%;">
 			
 
 				<h2>Account</h2>
@@ -114,7 +114,7 @@
 			
 		</div>
 	
-		<div id="test" style="background-color:white;">
+		<div id="content" style="background-color:white;">
 			<section>
 				<h1>Books Purchased</h1>
 			    	<p>-----------------------------------------------------------------------------------</p>
@@ -131,11 +131,11 @@
 						
 					</thead>
 					
-						<p>-----------------------------------------------------------------------------------</p>
+						
 
 					<%-- <c:forEach items="${adminReportsList}" var="current"> --%>
 						<tbody style="font-size:12px;font-family:SapientSansRegular;font-weight:regular;color:#1d1d1d">
-						
+							<tr style="border-bottom:1px solid black"></tr>
 							<tr id="${current.categoryName}">
 								<td style="width:500px;padding-right:50px;padding-left:50px;"><img src="img/icon_cart.jpg" width="56" height="78"/>{current.categoryName}</td>
 								<td class="bookTitle_td"style="width:400px">{current.bookTitle}</td>
